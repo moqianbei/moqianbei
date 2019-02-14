@@ -1,0 +1,199 @@
+    /* 默认样式清除 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-size: 15px;
+        background: #FdFdFd;
+    }
+
+    a {
+        text-decoration: none;
+        color: #504343;
+    }
+
+    li {
+        list-style: none;
+    }
+
+
+
+    /* --- 正式导航 --- */
+    nav {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .navigation {
+        width: 986px;
+        /* 7*140+6*1 */
+        float: left;
+        margin: 10px auto;
+        background: #fff;
+    }
+
+
+    .nav_head,
+    .nav_content {
+        float: left;
+        width: 100%;
+    }
+
+
+    /* --- 导航标题 --- */
+
+    .nav_head {
+        margin: 0 auto;
+        color: #3f3f3f;
+        background: #f8f8f8;
+    }
+
+    .nav_head li,
+    .nav_head span {
+        float: left;
+        height: 40px;
+        list-style: none;
+        font-size: 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex-box;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        /* 使内容（img和text）水平垂直居中 */
+    }
+
+    .nav_head span {
+        width: 100px;
+        color: #fff;
+        background: lightblue;
+        padding: 0 10px 0 2px;
+    }
+
+
+    /* 各个span颜色 */
+    #resource_search .nav_head span {
+        background: #795548;
+    }
+
+    #video_watch .nav_head span {
+        background: #388BCA;
+    }
+
+    #video_learn .nav_head span {
+        background: #009688;
+    }
+
+    #video_live .nav_head span {
+        background: #607D8B;
+    }
+
+    #novel .nav_head span {
+        background: #5abc53;
+    }
+
+    #picture .nav_head span {
+        background: #5d428e;
+    }
+
+
+
+
+    .nav_head li {
+        cursor: pointer;
+        width: 70px;
+        padding: 0 15px 0 15px;
+    }
+
+    .nav_head span img {
+        width: 20px;
+        padding: 0 5px 0 7px;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(170deg) brightness(107%) contrast(104%);
+    }
+
+    .nav_head .oli_active {
+        color: #3498db;
+        background: #fff;
+        border-top: 1px solid #3498db;
+    }
+
+
+
+    /* --- 导航内容 --- */
+
+    .nav_content {
+        float: left;
+        margin: 0 auto;
+    }
+
+    /* 导航内容默认状态隐藏 */
+    .nav_content div {
+        display: none;
+    }
+
+    /* 当前活动内容 */
+    .nav_content div.odiv_active {
+        display: block !important;
+    }
+
+    .nav_content div li {
+        display: inline-block;
+        float: left;
+        border-right: 1px solid #eee;
+        border-top: 1px solid #eee;
+    }
+
+    /* 右侧无边框 */
+    .nav_content div li.rn {
+        border-right: none !important;
+    }
+
+    /* 底部有边框 */
+    .nav_content div li.by {
+        border-bottom: 1px solid #eee !important;
+    }
+
+
+    .nav_content div li a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex-box;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        width: 140px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        background: #fff;
+    }
+
+    .nav_content div li a:hover {
+        background: #fcfcfc;
+        color: #E54348;
+    }
+
+    .nav_content div li a img {
+        display: inline-block;
+        width: 16px;
+        padding-right: 3px;
+    }
+
+
+    aside {
+        position: fixed;
+        right: 60px;
+        bottom: 50px;
+    }
