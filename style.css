@@ -5,9 +5,24 @@
     }
 
     body {
+        width: 1000px;
+        margin: 0 auto;
         font-size: 15px;
-        background: #FdFdFd;
+        background: #45494F;
+        /*#FdFdFd;*/
     }
+
+
+    /*  整体配色 */
+
+    header,
+    nav,
+    #pic,
+    #myself,
+    .nav_head {
+        background: #f8f8f8;
+    }
+
 
     a {
         text-decoration: none;
@@ -19,11 +34,126 @@
     }
 
 
+    header {
+        width: 986px;
+        height: 60px;
+        margin: 10px auto;
+    }
 
-    /* --- 正式导航 --- */
-    nav {
-        width: 75%;
+    #weather,
+    #search {
+        height: 60px;
+        float: left;
+    }
+
+    #weather {
+        width: 450px;
+        padding-left: 20px;
+    }
+
+
+    #search {
+        width: 500px;
+        padding-top: 15px;
+    }
+
+    #search input {
+        float: left;
+        outline: none;
+        /*去掉获取焦点后的蓝框*/
+    }
+
+    #search input[type="text"] {
+        height: 30px;
+        width: 300px;
+        margin-left: 40px;
+        border: 1px solid #e1e1e1;
+        /*设置边框，同时去除边框阴影*/
+        border-radius: 15px;
+        padding-left: 20px;
+    }
+
+
+
+    #search input[type="submit"] {
+        height: 30px;
+        width: 90px;
+        background-image: url("https://www.google.com.sg/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png");
+        background-size: cover;
+        margin-left: 10px;
+        border: none;
+        background-color: transparent;
+    }
+
+
+
+    /* --- 个人使用 --- */
+    #personal {
+        width: 986px;
         margin: 0 auto;
+    }
+
+    #pic,
+    #myself {
+        float: left;
+    }
+
+    #pic {
+        width: 211px;/* 986-745-10*2-10 */
+        height: 230px;/* 105*2+10*2 */
+        margin-right: 10px;
+    }
+
+    #myself {
+        height: 210px;
+        width: 745px;
+        padding: 10px;
+    }
+
+    #myself ul li {
+        float: left;
+        width: 105px;
+        height: 105px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex-box;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        /* 使内容（img和text）水平垂直居中 */
+    }
+
+    #myself ul li a {
+        font-size: 13px;
+    }
+
+
+    #myself ul li img {
+        width: 48px;
+        height: 48px;
+        border: 5px #F3F3F3 solid;
+        border-radius: 10px;
+        transition: 100ms;
+
+    }
+
+    #myself ul li img:hover {
+        border: 5px #D8DFDA solid;
+        border-radius: 50%;
+    }
+
+
+    /* --- 正 式 导 航 --- */
+    nav {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 0 7px;
+        /*(1000-986)/2*/
     }
 
     .navigation {
@@ -47,7 +177,6 @@
     .nav_head {
         margin: 0 auto;
         color: #3f3f3f;
-        background: #f8f8f8;
     }
 
     .nav_head li,
@@ -70,6 +199,7 @@
         /* 使内容（img和text）水平垂直居中 */
     }
 
+    /* 默认span颜色 */
     .nav_head span {
         width: 100px;
         color: #fff;
@@ -79,32 +209,55 @@
 
 
     /* 各个span颜色 */
-    #resource_search .nav_head span {
+
+    #resource .nav_head span {
         background: #795548;
     }
 
-    #video_watch .nav_head span {
+    #video .nav_head span {
         background: #388BCA;
     }
 
-    #video_learn .nav_head span {
-        background: #009688;
+    #software .nav_head span {
+        background: #F44336;
     }
 
-    #video_live .nav_head span {
-        background: #607D8B;
-    }
-
-    #novel .nav_head span {
+    #book .nav_head span {
         background: #5abc53;
     }
 
+    #learn .nav_head span {
+        background: #009688;
+    }
+
     #picture .nav_head span {
-        background: #5d428e;
+        background: #fd6a6d;
+    }
+
+    #amusement .nav_head span {
+        background: #607D8B;
+    }
+
+    #nav_web .nav_head span {
+        background: #9e5a2d;
+    }
+
+    #other .nav_head span {
+        background: #f58220;
+    }
+
+    #tool .nav_head span {
+        background: #7fb80e;
     }
 
 
 
+    /*
+    待选颜色
+
+     薄緑 #1d953f 仙斎茶 #27342b 露草色 #33a3dc 芥子色 #c7a252 紫绀 #411445 菖蒲色 #694d9f 若緑 #7fb80e   杜若色 #426ab3
+
+    */
 
     .nav_head li {
         cursor: pointer;
@@ -116,11 +269,14 @@
         width: 20px;
         padding: 0 5px 0 7px;
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(170deg) brightness(107%) contrast(104%);
+        /*使黑色图片变为白色*/
     }
+
 
     .nav_head .oli_active {
         color: #3498db;
         background: #fff;
+        height: 39px;
         border-top: 1px solid #3498db;
     }
 
@@ -192,8 +348,46 @@
     }
 
 
+
     aside {
         position: fixed;
-        right: 60px;
-        bottom: 50px;
+        right: 50px;
+        bottom: 40px;
+        background: #fff;
+        width: 110px;
+    }
+
+
+
+    aside li {
+        float: left;
+        height: 34px;
+        width: 100%;
+        list-style: none;
+        font-size: 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex-box;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        /* 使内容（img和text）水平垂直居中 */
+        border-bottom: 1px solid #333;
+    }
+
+    aside li a {
+        width: 100%;
+        display: block;
+    }
+
+    aside li img {
+        width: 16px;
+        filter: invert(18%) sepia(0%) saturate(1%) hue-rotate(302deg) brightness(104%) contrast(96%);
+        /* 使黑色图片变为#333 */
+        padding-right: 5px;
     }
